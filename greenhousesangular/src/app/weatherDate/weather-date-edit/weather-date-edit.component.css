@@ -44,8 +44,7 @@ form {
   }
 
   body {
-    background-image: url('C:\year2layla\greenhouses\greenhousesangular\src\assets\pics\pic6.jpg');
-    background-size: cover; 
+   
     background-repeat: no-repeat; 
     background-position: center; 
     min-height: 100vh; /* Ensures the body is at least as tall as the viewport */
