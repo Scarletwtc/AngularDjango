@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="ull">
+                    <h3>Our waterings:</h3>
+                    <li *ngFor="let watering of waterings">
+                        Last watered: {{watering.LastWatered}} <br>
+                        Frequency: {{watering.Frequency}} <br>
+                        Plant: {{watering.Plant}} <br>
+                        Worker: {{watering.Worker}} <br>
+                        <button [routerLink]="['/edit-waterings', watering.WateringID]">Edit</button>
+                        <button (click)="deleteWatering(watering.WateringID)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

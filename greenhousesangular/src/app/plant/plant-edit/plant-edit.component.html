@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="editPlantForm" ngSubmit="onSubmit()">
+                    <label for="datePlanted">Date Planted:</label>
+                    <input id="datePlanted" formControlName="DatePlanted" type="date">
+                    <label for="height">Height:</label>
+                    <input id="height" formControlName="Height" type="text">
+                    <label for="greenhouse">Greenhouse:</label>
+                    <input id="greenhouse" formControlName="Greenhouse" type="text">
+                    <button  type="submit">Save Changes</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="addLocationForm" (ngSubmit)="onSubmit()">
+                    <h4>Add Location:</h4>
+                    <label for="name">Name:</label>
+                    <input id="name" formControlName="Name" />
+                    <label for="region">Region:</label>
+                    <input id="region" formControlName="Region" type="text">
+                    <label for="climate">Climate:</label>
+                    <input id="climate" formControlName="Climate" type="text">
+                    <label for="latitude">Latitude:</label>
+                    <input id="latitude" formControlName="Latitude" type="text">
+                    <label for="longitude">Longitude:</label>
+                    <input id="longitude" formControlName="Longitude" type="text">
+                    <label for="ecosystem">Ecosystem:</label>
+                    <input id="ecosystem" formControlName="Ecosystem" type="text">
+                    <button type="submit" [disabled]="addLocationForm.invalid">Add Location</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

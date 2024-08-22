@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="editUserForm" (ngSubmit)="onSubmit()"> 
+                    <label for="email">Email:</label>
+                    <input type="email" formControlName="Email" id="email">
+                    <label for="password">Password:</label>
+                    <input type="password" formControlName="Password" id="password">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" formControlName="Username">
+                    <label for="dateJoined">Date joined: </label>
+                    <input type="date" id="dateJoined" formControlName="DateJoined">
+                    <button type="submit">Save changes</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

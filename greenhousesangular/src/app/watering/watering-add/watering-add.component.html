@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="addWateringForm" (ngSubmit)="onSubmit() ">
+                    <label for="lastWatered">Last watered: </label>
+                    <input id="lastWatered" formControlName="LastWatered" type="text">
+                    <label for="frequency" >Frequency: </label>
+                    <input id="frequency" formControlName="Frequency" type="text">
+                    <label for="plant">Plant: </label>
+                    <input id="plant" formControlName="Plant" type="text">
+                    <label for="worker">Worker: </label>
+                    <input id="worker" formControlName="Worker" type="text">
+                    <button type="submit" [disabled]="addWateringForm.invalid">Add Watering</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

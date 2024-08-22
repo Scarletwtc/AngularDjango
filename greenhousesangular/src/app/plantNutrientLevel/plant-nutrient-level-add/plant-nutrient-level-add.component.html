@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="addPlantNutrientLevelForm" (ngSubmit)="onSubmit()">
+                    <label for="nitrogen">Nitrogen: </label>
+                    <input id="nitrogen" formControlName="Nitrogen" type="text">
+                    <label for="phosphorus">Phosphorus: </label>
+                    <input id="phosphorus" formControlName="Phosphorus" type="text">
+                    <label for="potassium">Potassium: </label>
+                    <input id="potassium" formControlName="Potassium" type="text">
+                    <label for="plant">Plant</label>
+                    <input id="plant" formControlName="Plant" type="text">
+                    <button type="submit" [disabled]="addPlantNutrientLevelForm.invalid">Add plant nutrient level </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

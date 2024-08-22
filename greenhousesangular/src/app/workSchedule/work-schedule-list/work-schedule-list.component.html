@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Our work schedules:</h3>
+                <ul class="ull">
+                    <li *ngFor="let workSchedule of workSchedules ">
+                        Date: {{workSchedule.Date}} <br>
+                        Work Hours: {{workSchedule.WorkHours}} <br>
+                        Worker: {{ workSchedule.Worker}} <br>
+                        <button [routerLink]="['edit-work-schedules', workSchedule.WorkScheduleID]">Edit</button>
+                        <button (click)="deleteWorkSchedule(workSchedule.WorkScheduleID)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

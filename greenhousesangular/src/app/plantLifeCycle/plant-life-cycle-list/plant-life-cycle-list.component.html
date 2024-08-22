@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Our Plant Life Cycles:</h3>
+                <ul class="ull">
+                    <li *ngFor="let plantLifeCycle of plc">
+                        Germination Date: {{ plantLifeCycle.GerminationDate }}<br>
+                        Maturity Date: {{ plantLifeCycle.MaturityDate }}<br>
+                        Plant: {{ plantLifeCycle.Plant }}<br>
+                        <button [routerLink]="['/edit-plant-life-cycles', plantLifeCycle.PlantLifeCycleID]">Edit</button>
+                        <button (click)="deletePlantLifeCycle(plantLifeCycle.PlantLifeCycleID)">Delete</button>
+                       
+                    </li>    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

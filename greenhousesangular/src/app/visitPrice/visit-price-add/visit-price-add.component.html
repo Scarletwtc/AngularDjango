@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="addVisitPriceForm" (ngSubmit)="onSubmit()">
+                    <label for="price">Price: </label>
+                    <input id="price" formControlName="Price" type="text">
+                    <label for="visit">Visit: </label>
+                    <input id="visit" formControlName="Visit" type="text">
+                    <button type="submit" [disabled]="addVisitPriceForm.invalid">Add visit price</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

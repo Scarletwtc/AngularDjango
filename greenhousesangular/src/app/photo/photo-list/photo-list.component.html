@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3> Our photos: </h3>
+                <ul class="ull">
+                    <li *ngFor="let photo of photos">
+                    Date Taken: {{photo.DateTaken}} <br>
+                    Plant: {{photo.Plant}} <br>
+                    User: {{photo.User}} <br>
+                    Image: {{photo.Image}}
+                    <button [routerLink]="['/edit-photos', photo.PhotoID]">Edit</button>
+                    <button (click)="deletePhoto(photo.PhotoID)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

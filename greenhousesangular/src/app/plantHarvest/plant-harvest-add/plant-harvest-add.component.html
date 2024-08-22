@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="addPlantHarvestForm"  (ngSubmit)="onSubmit()">
+                    <label for="dateHarvested">Date Harvested: </label>
+                    <input id="dateHarvested" formControlName="DateHarvested" type="date">
+                    <label for="specie">Specie: </label>
+                    <input type="text" formControlName="Specie" id="specie">
+                    <label for="plant">Plant: </label>
+                    <input type="text" formControlName="Plant" id="plant">
+
+                    <button type="submit" > Add Plant Harvest</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3> Visit prices: </h3>
+                <ul class="ull">
+                    <li *ngFor="let visitPrice of visitPrices">
+                        Price: {{visitPrice.Price}} <br>
+                        Visit: {{visitPrice.Visit}} <br>
+                        <button [routerLink]="['/edit-visit-prices, visitPrice.VisitPriceID']">Edit</button>
+                        <button (click)="deleteVisitPrice(visitPrice.VisitPriceID)">Delete</button>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

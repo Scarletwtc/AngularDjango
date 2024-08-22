@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>Our Ecosystems:</h3>
+        <ul class="ull">
+          <li *ngFor="let ecosystem of ecosystems" >
+             Type: {{ecosystem.Type}} 
+            <br>Description: {{ ecosystem.Description }}
+            <button [routerLink]="['/edit-ecosystems', ecosystem.EcosystemID]">Edit</button>
+            <button (click)="deleteEcosystem(ecosystem.EcosystemID)">Delete</button>
+           <br> 
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

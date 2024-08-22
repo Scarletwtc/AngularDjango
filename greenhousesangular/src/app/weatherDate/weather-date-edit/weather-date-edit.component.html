@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]= "editWeatherDateForm" (ngSubmit)="onSubmit()">
+                    <h4>Edit Weather Data: </h4>
+                    <label for="date">Date added:</label>
+                    <input id="date" formControlName= "Date" type ="text">
+                    <label for="temperature">Temperature:</label>
+                    <input id="temperature" formControlName= "Temperature" type ="text">
+                    <label for="humidity">Humidity:</label>
+                    <input id="humidity" formControlName= "Humidity" type ="text">
+                    <label for="percipitation">Percipitation: </label>
+                    <input id="percipitation" formControlName="Percipitation" type="text">
+                    <label for="location">Location:</label>
+                    <input id="location" formControlName= "Location" type ="text">
+
+                    <button type = "submit">Save Changes  </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

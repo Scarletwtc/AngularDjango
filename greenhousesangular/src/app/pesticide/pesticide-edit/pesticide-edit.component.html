@@ -1,0 +1,34 @@
+<p>pesticide-edit works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="editPesticideForm" (ngSubmit)="onSubmit()">
+                    <h4>Edit Pesticide:</h4>
+                    <label for="type">Type:</label>
+                    <input id="type" formControlName="Type" type="text">
+
+                    <label for="date">Date:</label>
+                    <input id="date" formControlName="Date" type="text">
+
+                    <label for="plant">Plant:</label>
+                    <input id="plant" formControlName="Plant" type="text">
+
+                    <label for="worker">Worker:</label>
+                    <input id="worker" formControlName="Worker" type="text">
+
+                    <button type="submit" [disabled]="editPesticideForm.invalid">Edit Pesticide</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

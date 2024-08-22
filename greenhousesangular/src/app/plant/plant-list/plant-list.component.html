@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="ull">
+                    <h3>Our plants:</h3>
+                    <li *ngFor="let plant of plants">
+                        
+                        Height: {{plant.Height}} 
+                        <br> Date Planted: {{ plant.DatePlanted }}
+                        <button [routerLink]="['/edit-plants', plant.PlantID]">Edit</button>
+                        <button (click)="deletePlant(plant.PlantID)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

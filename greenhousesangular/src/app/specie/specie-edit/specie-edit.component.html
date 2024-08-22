@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="editSpecieForm" (ngSubmit)="onSubmit()">
+                    <label for="commonName">Common Name: </label>
+                    <input id="commonName" formControlName="CommonName" type="text">
+                    <label for="scientificName">Scientific Name: </label>
+                    <input id="scientificName" formControlName="ScientificName" type="text">
+                    <label for="plant">Plant: </label>
+                    <input id="plant" formControlName="Plant" type="text">
+                    <button type="submit" > Save Changes</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

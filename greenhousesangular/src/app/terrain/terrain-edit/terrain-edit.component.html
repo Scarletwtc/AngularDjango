@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]= "editTerrainForm" (ngSubmit)="onSubmit()">
+                    <h4>Edit Terrain: </h4>
+                    <label for="type">Type:</label>
+                    <input id="type" formControlName= "Type" type ="text">
+                    <label for="features">Features:</label>
+                    <input id="features" formControlName= "Features" type ="text">
+                    <label for="ecosystem">Ecosystem:</label>
+                    <input id="ecosystem" formControlName= "Ecosystem" type ="text">
+                    <button type = "submit">Save Changes  </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

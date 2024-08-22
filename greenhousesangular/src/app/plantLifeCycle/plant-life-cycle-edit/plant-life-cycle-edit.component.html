@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="editPlantLifeCycleForm" (ngSubmit)="onSubmit()">
+                    <label for="germinationDate">Germination Date:</label>
+                    <input type="date" id="germinationDate" formControlName="GerminationDate">
+                    <label for="maturityDate">Maturity Date:</label>
+                    <input type="date" id="maturityDate" formControlName="MaturityDate">
+                    <label for="plant">Plant:</label>
+                    <input type="text" id="plant" formControlName="Plant">
+                    
+                    <button type="submit" [disabled]="editPlantLifeCycleForm.invalid">Edit Plant Life Cycle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

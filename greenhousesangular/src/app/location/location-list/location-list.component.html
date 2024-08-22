@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3> Our Locations: </h3>
+                <ul class="ull">
+                    <li *ngFor="let location of locations">
+                        Name: {{location.Name}} <br> Region: {{location.Region}} <br> Climate: {{location.Climate}} <br> Latitude: {{location.Latitude}} <br> Longitude: {{location.Longitude}} <br> Ecosystem: {{location.Ecosystem}}
+                        <p> </p>
+                        <button [routerLink]= "['/edit-locations', location.LocationID]">Edit</button>
+                        <button (click)= "deleteLocation(location.LocationID)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

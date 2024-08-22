@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="contianer">
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="addEcosystemForm" (ngSubmit)="onSubmit()">
+          <h4>Add Ecosystem</h4>
+          <label for="type">Type:</label>
+          <input id="type" formControlName="Type" />
+  
+          <label for="description">Description:</label>
+          <textarea id="description" formControlName="Description"></textarea>
+  
+          <label for="greenhouse">Greenhouse:</label>
+          <input id="greenhouse" formControlName="Greenhouse" type="number" />
+  
+          <button type="submit" [disabled]="addEcosystemForm.invalid">Add Ecosystem</button>
+        </form>
+      </div>
+      
+        
+  
+    </div>
+  </div>
+  
+</body>
+</html>
+

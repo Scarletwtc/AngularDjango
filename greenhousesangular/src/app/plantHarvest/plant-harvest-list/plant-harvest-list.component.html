@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"><div class="row">
+        <div class="col">
+            <h3>Out plant harvests:</h3>
+            <ul class="ull">
+                <li *ngFor="let plantHarvest of plantHarvests">
+                    Date Harvested: {{ plantHarvest.DateHarvested}} <br>
+                    Specie: {{ plantHarvest.Specie}} <br>
+                    Plant: {{ plantHarvest.Plant}} <br>
+
+                    <button [routerLink]="['/edit-plant-harvests', plantHarvest.PlantHarvestID]">Edit</button>
+                    <button (click)="deletePlantHarvest(plantHarvest.PlantHarvestID)">Delete </button>
+
+                </li>
+            </ul>
+        </div>
+    </div></div>
+</body>
+</html>

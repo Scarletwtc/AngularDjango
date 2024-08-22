@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <h3> Our Greenhouses: </h3>
+            <ul class="ull">
+              <li *ngFor="let greenhouse of greenhouses">
+                Name: {{greenhouse.Name}}
+                <p>  </p>
+                <button [routerLink]= "['/edit-greenhouses', greenhouse.GreenhouseID]">Edit</button>
+                <button (click)= "deleteGreenhouse(greenhouse.GreenhouseID)">Delete</button>
+              </li>
+            </ul>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

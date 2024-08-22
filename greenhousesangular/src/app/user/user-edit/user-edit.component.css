@@ -1,0 +1,55 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    padding-top: 10px;
+    position: center;
+  }
+    
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    input, textarea {
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+    
+    textarea {
+      resize: vertical;
+    }
+    
+    button {
+      padding: 10px;
+      background-color: #15501a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+    
+    body {
+        background-image: url('C:\year2layla\greenhouses\greenhousesangular\src\assets\pics\userspic.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center; 
+        min-height: 100vh; 
+        margin: 0; 
+        padding: 0; 
+    }

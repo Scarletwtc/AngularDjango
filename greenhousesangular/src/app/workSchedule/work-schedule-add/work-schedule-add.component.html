@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="addWorkScheduleForm" (ngSubmit)="onSubmit()">
+                    <label for="date">Date: </label>
+                    <input id="date" formControlName="Date" type="date">
+                    <label for="workHours">Work Hours:</label>
+                    <input id="workHours" formControlName="WorkHours" type="text">
+                    <label for="worker"> Worker: </label>
+                    <input id="worker" formControlName="Worker" type="text">
+                    <button type="submit" [disabled]="addWorkScheduleForm.invalid">Add work schedule</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
